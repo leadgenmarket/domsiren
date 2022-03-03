@@ -10,6 +10,7 @@ import { Galery } from './galery';
 import { Hod_str } from './hod_str';
 import { Contacts } from './contacts';
 import { Footer } from './footer';
+import { Example } from "./example";
 
 
 
@@ -18,6 +19,7 @@ export const Loader = () => {
 
     const blocksImports = [
         <Header />,
+        <Example />,
         <Menu />,
         <Genplan />,
         <Plan_price />,
@@ -31,7 +33,7 @@ export const Loader = () => {
     const loaded = useContext(BlocksContext)
 
     const LoadBlock = (block) => {
-        return <Suspense fallback={<div>Загрузка...</div>}>{blocksImports[block]}</Suspense>
+        return <Suspense fallback={<div>Загрузка...</div>}>{blocksImports}</Suspense>
     }
 
     const generateHtml = () => {
@@ -48,7 +50,7 @@ export const Loader = () => {
     }
     const handleScroll = (event) => {
 
-        if (loaded.blocks < Object.keys(blocksImports).length) {
+        if (loaded.blocks < blocksImports.length) {
 
             loaded.setBlocks(20)
             loaded.setPopup(true)
