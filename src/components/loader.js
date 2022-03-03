@@ -31,39 +31,42 @@ export const Loader = () => {
     ]
 
     const loaded = useContext(BlocksContext)
+    loaded.setBlocks(blocksImports.length)
 
     const LoadBlock = (block) => {
         return <Suspense fallback={<div>Загрузка...</div>}>{blocksImports}</Suspense>
     }
 
     const generateHtml = () => {
-        let toDraw = []
+        /*let toDraw = []
         for (let i = 0; i < loaded.blocks; i++) {
             toDraw.push(LoadBlock(blocksImports[i]))
-        }
+        }*/
         return (
+
             <div className="blocks" data={loaded.menuClick ? "true" : ""}>
                 <Popups />
-                {toDraw.map((block) => block)}
+                {blocksImports.map((block) =>
+                    block
+                )}
             </div>
+
         )
     }
-    const handleScroll = (event) => {
+    /*const handleScroll = (event) => {
 
         if (loaded.blocks < blocksImports.length) {
-
-            loaded.setBlocks(20)
+            loaded.setBlocks(blocksImports.length) //fix later
             loaded.setPopup(true)
-
         } else {
             window.removeEventListener('scroll', handleScroll, true);
         }
     }
     useEffect(() => {
-        if (loaded.blocks < Object.keys(blocksImports).length) {
+        if (loaded.blocks < blocksImports.length) {
             window.addEventListener('scroll', handleScroll, true);
         }
-    })
+    })*/
     return generateHtml()
 
 }
