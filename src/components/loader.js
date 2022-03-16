@@ -18,16 +18,19 @@ import { Example } from "./example";
 export const Loader = () => {
 
     const blocksImports = [
-        <Header />,
-        <Example />,
-        <Menu />,
-        <Genplan />,
-        <Plan_price />,
-        <How_buy />,
-        <Galery />,
-        <Hod_str />,
-        <Contacts />,
-        <Footer />,
+
+        <Main />,
+
+        // <Header />,
+        // <Example />,
+        // <Menu />,
+        // <Genplan />,
+        // <Plan_price />,
+        // <How_buy />,
+        // <Galery />,
+        // <Hod_str />,
+        // <Contacts />,
+        // <Footer />,
     ]
 
     const loaded = useContext(BlocksContext)
