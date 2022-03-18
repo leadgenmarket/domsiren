@@ -1,9 +1,12 @@
 
 import React, { useContext } from 'react'
+import { PhoneInput } from './phone_input'
+import { useSendForm } from '../hooks/send-from.hook'
 
 const Presentation = () => {
+    const sendForm = useSendForm();
     return (
-        <div className="get_present plr">
+        <section className="get_present plr">
             <div className="wmain">
                 <div className="tm__main">
                     <div className="tm">
@@ -19,31 +22,32 @@ const Presentation = () => {
                         <div className="in_item">
                             <label className="in_style">
                                 <i><img src="img/in_name.png" /></i>
-                                <input type="text" value="Алексей" data="Алексей" />
+                                <input type="text" name="name" placeholder="Ваше имя" />
                             </label>
                         </div>
                         <div className="in_item">
                             <label className="in_style">
                                 <i><img src="img/in_mail.png" /></i>
-                                <input type="text" value="Ваш e-mail" data="Ваш e-mail" />
+                                <input type="text" name="email" placeholder=" Ваш e-mail" />
                             </label>
                         </div>
                         <div className="in_item">
                             <label className="in_style">
                                 <i><img src="img/in_phone.png" /></i>
-                                <input className="in_phone" type="text" value="Ваш телефон" data="Ваш телефон" />
+                                <PhoneInput />
                             </label>
                         </div>
                     </div>
+                    <input type="hidden" className="text" value="Заказать звонок" />
                     <div className="alicen_center">
-                        <button className="btn_form">
+                        <button className="btn_form" celtype={"getPresent"} onClick={sendForm.sendForm}>
                             <img src="img/btn_get-present_ico.png" />
                             <span>Получить презентацию</span>
                         </button>
                     </div>
                 </form>
             </div>
-        </div>
+        </section>
     )
 }
 

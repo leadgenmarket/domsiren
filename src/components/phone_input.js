@@ -60,5 +60,5 @@ export const PhoneInput = () => {
             }
         }
     }
-    return (<TextField name="phone" label="Ваш телефон" onChange={phoneChange} value={phone} />)
+    return (<input className="in_phone" name="phone" type="text" onChange={phoneChange} value={phone} placeholder="Ваш телефон" />)
 }

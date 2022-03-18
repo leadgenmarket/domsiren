@@ -39,8 +39,8 @@ export const Popups = () => {
             e.currentTarget.classList.remove("return")
         } else {
             document.querySelector('body').classList.remove('overflow')
-            document.querySelector('.popup_rgba').style.display = "none"
-            document.querySelectorAll('.popup_main').forEach(el => {
+            document.querySelector('.pu_rgba').style.display = "none"
+            document.querySelectorAll('.pu_inner').forEach(el => {
                 el.style.display = "none"
             });
         }
@@ -58,7 +58,7 @@ export const Popups = () => {
     function isDescendant(child) {
         var node = child.parentNode;
         while (node.classList != undefined) {
-            if (node.classList.contains('popup_main')) {
+            if (node.classList.contains('pu_inner')) {
 
                 return true;
             }
@@ -110,8 +110,8 @@ export const Popups = () => {
             })
         }
         document.querySelector('body').classList.remove('overflow')
-        document.querySelector('.popup_rgba').style.display = "none"
-        document.querySelectorAll('.popup_main').forEach(el => {
+        document.querySelector('.pu_rgba').style.display = "none"
+        document.querySelectorAll('.pu_inner').forEach(el => {
             el.style.display = "none"
         });
 
@@ -165,10 +165,10 @@ export const Popups = () => {
         if (document.querySelector('.blocks') != null) {
             document.querySelector('.blocks').addEventListener('click', (e) => {
                 let clicked = e.target
-                if (!clicked.classList.contains('popup_main') && !isDescendant(clicked) && e.target.nodeName.toLowerCase() != 'canvas') {
+                if (!clicked.classList.contains('pu_inner') && !isDescendant(clicked) && e.target.nodeName.toLowerCase() != 'canvas') {
                     document.querySelector('body').classList.remove('overflow')
-                    document.querySelector(".popup_rgba").style.display = "none";
-                    document.querySelectorAll('.popup_main').forEach(el => {
+                    document.querySelector(".pu_rgba").style.display = "none";
+                    document.querySelectorAll('.pu_inner').forEach(el => {
                         el.style.display = "none"
                     });
                 }
@@ -248,11 +248,11 @@ export const Popups = () => {
 
 
     return (
-        <section className="popups popup_rgba" style={{ display: "none" }}>
-            <div className="popup_table">
-                <div className="popup_cell">
+        <section className="pu_rgba plr" style={{ display: "none" }}>
+            <div className="pu_table">
+                <div className="pu_cell">
 
-                    <div className="popup_main popup_menu" style={{ display: "none" }}>
+                    <div className="pu_inner popup_menu" style={{ display: "none" }}>
                         <a href="#" className="closeform" onClick={close}></a>
                         <div className="menu_list">
                             <a href="near_house" onClick={clickMenu}><span>Ипотека от 0,1 %</span></a>
@@ -262,197 +262,152 @@ export const Popups = () => {
                         </div>
                     </div>
 
-                    <div className="popup_main pu_thx" style={{ display: "none" }}>
-                        <a href="#" className="closeform" onClick={close}></a>
-                        <div className="pu_tm">
-                            <span><l>Спасибо</l></span>
-                            <sub>В ближайшее время с вами <br /> свяжется наш специалист</sub>
+
+                    <div style={{ display: "none" }} className="pu_inner pu_good pu_thx">
+                        <div className="closeform" onClick={close}><img src="img/closeform.svg" /></div>
+                        <div className="pu_title">
+                            Спасибо
+                            <span>
+                                В ближайшее время с вами свяжется наш специалист
+                            </span>
+                        </div>
+                        <div className="pu_btn_center">
+                            <div className="btn_form" onClick={close}>Закрыть</div>
                         </div>
                     </div>
 
-                    <div className="popup_main pu_call" style={{ display: "none" }}>
-                        <a href="#" className="closeform" onClick={close}></a>
-                        <div className="pu_tm">
-                            <span>Заказать звонок</span>
+                    <div style={{ display: "none" }} className="pu_inner pu_ipoteka">
+                        <div className="closeform" onClick={close}><img src="img/closeform.svg" /></div>
+                        <div className="pu_title">
+                            Получите расчет ежемесячного платежа по ипотеке с господдержкой
                         </div>
                         <form className="pu_form">
-                            <div className="form_in react_input_style">
-                                <TextField name="name" label="Ваше имя" className="pu_name" />
+                            <div className="in_2">
+                                <div className="in_2_inner">
+                                    <label className="in_style in_select">
+                                        <select onChange={(event) => { setPervIpot(event.target.value) }}>
+                                            <option value={""}>Первоначальный взнос</option>
+                                            <option value={"10%"}>10%</option>
+                                            <option value={"20%"}>20%</option>
+                                            <option value={"30%"}>30%</option>
+                                            <option value={"40%"}>40%</option>
+                                            <option value={"50%"}>50%</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <div className="in_2_inner">
+                                    <label className="in_style in_select">
+                                        <select onChange={(event) => { setSrokIpot(event.target.value) }}>
+                                            <option value={""}>На срок</option>
+                                            <option value={"5 лет"}>5 лет</option>
+                                            <option value={"10 лет"}>10 лет</option>
+                                            <option value={"15 лет"}>15 лет</option>
+                                            <option value={"20 лет"}>20 лет</option>
+                                            <option value={"25 лет"}>25 лет</option>
+                                            <option value={"30 лет"}>30 лет</option>
+                                        </select>
+                                    </label>
+                                </div>
                             </div>
-                            <div className="form_in react_input_style">
-                                <InputMask mask="+7\ (999) 999-99-99" name="phone" maskChar={null}>
-                                    <TextField name="phone" label="Ваш телефон" className="pu_phone" />
-                                </InputMask>
-                            </div>
-                            <div className="form_in react_input_style">
-                                <TextField onChange={timeFieldChange} name="name" label="Удобное время для звонка" className="pu_time" />
-                            </div>
-                            <input type="hidden" class="text" value="Заказать звонок" />
-                            <input type="hidden" className="dop-info" data="Удобное время звонка" value={time} />
-                            <button className="pu_btn" celtype="getCall" onClick={sendForm.sendForm}>Заказать звонок</button>
-                        </form>
-                    </div>
 
-                    <div className="popup_main pu_ipot" style={{ display: "none" }}>
-                        <a href="#" className="closeform" onClick={close}></a>
-                        <div className="pu_tm">
-                            <span><l>Получите расчет</l></span> ежемесячного платежа
-                            <sub>по ипотеке с господдержкой</sub>
-                        </div>
-                        <form className="pu_form">
-                            <NativeSelect
-                                onChange={(event) => { setPervIpot(event.target.value) }} className="form_in react_select_style input_vznos">
-                                <option value={""}>Первоначальный взнос</option>
-                                <option value={"10%"}>10%</option>
-                                <option value={"20%"}>20%</option>
-                                <option value={"30%"}>30%</option>
-                                <option value={"40%"}>40%</option>
-                                <option value={"50%"}>50%</option>
-                            </NativeSelect>
-                            <NativeSelect
-                                onChange={(event) => { setSrokIpot(event.target.value) }} className="form_in react_select_style input_srok">
-                                <option value={""}>На срок</option>
-                                <option value={"5 лет"}>5 лет</option>
-                                <option value={"10 лет"}>10 лет</option>
-                                <option value={"15 лет"}>15 лет</option>
-                                <option value={"20 лет"}>20 лет</option>
-                                <option value={"25 лет"}>25 лет</option>
-                                <option value={"30 лет"}>30 лет</option>
-                            </NativeSelect>
-                            <div className="form_in react_input_style input_name">
-                                <TextField name="name" label="Ваш имя" />
+                            <div className="in_2">
+                                <div className="in_2_inner">
+                                    <label className="in_style">
+                                        <i><img src="img/in_name.png" /></i>
+                                        <input type="text" value="Алексей" data="Алексей" />
+                                    </label>
+                                </div>
+                                <div className="in_2_inner">
+                                    <label className="in_style">
+                                        <i><img src="img/in_phone.png" /></i>
+                                        <input className="in_phone" type="text" value="Ваш телефон" data="Ваш телефон" inputmode="text" />
+                                    </label>
+                                </div>
                             </div>
-                            <div className="form_in react_input_style input_phone">
-                                <PhoneInput />
-                            </div>
-                            <input type="hidden" class="dop-info" data="Первоначальный взнос: " value={pervIpot} />
-                            <input type="hidden" class="dop-info" data="Срок: " value={srokIpot} />
+                            <input type="hidden" className="dop-info" data="Первоначальный взнос: " value={pervIpot} />
+                            <input type="hidden" className="dop-info" data="Срок: " value={srokIpot} />
                             <input type="hidden" className="text" value='Получить расчет' />
-                            <button className="pu_btn" celtype="getIpot" onClick={sendForm.sendForm}>Получить расчет</button>
+                            <button className="btn_form">Отправить</button>
                         </form>
                     </div>
 
-                    <div className="popup_main pu_flat" style={{ display: "none" }}>
-                        <a href="#" className="closeform" onClick={close}></a>
-                        <div className="pu_tm">
-                            <span><l>Двухкомнатная</l></span> квартира
+                    <div style={{ display: "none" }} class="pu_inner pu_flat">
+                        <div onClick={close} class="closeform"><img src="img/closeform.svg" /></div>
+                        <div class="pu_title">
+                            Двухкомнатная <br />квартира:
                         </div>
-                        <div className="area">
-                            <span>Общая площадь:<b><i>73,63</i> м<sup>2</sup></b></span>
-                            <span>Жилая площадь:<b><i>43,39</i> м<sup>2</sup></b></span>
-                        </div>
-                        <div className="flat_img"><img src="/images/flat_img.jpg" /></div>
-                        <form className="pu_form">
-                            <div className="form_tit">Узнайте стоимость квартиры <br /> на сегодня</div>
-                            <div className="form_in react_input_style input_name">
-                                <TextField name="name" label="Ваш имя" />
+                        <div class="pu_flat">
+                            <div class="pu_flat_l">
+                                <ul class="pu_flat_info">
+                                    <li>
+                                        Общая площадь
+                                        <span id="sq_all">73,39 М²</span>
+                                    </li>
+                                    <li>
+                                        Жилая площадь
+                                        <span id="sq_zhil">43,39 М²</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <div className="form_in react_input_style input_phone">
-                                <PhoneInput />
+                            <div class="pu_flat_r"><img src="img/pu_flat_img1.png" /></div>
+                        </div>
+                        <form class="pu_form">
+                            <div class="pu_form__title">Узнайте стоимость квартиры на сегодня</div>
+                            <div class="in_2">
+                                <div class="in_2_inner">
+                                    <label class="in_style">
+                                        <i><img src="img/in_name.png" /></i>
+                                        <input type="text" value="Имя" name="name" placeholder="Имя" />
+                                    </label>
+                                </div>
+                                <div class="in_2_inner">
+                                    <label class="in_style">
+                                        <i><img src="img/in_phone.png" /></i>
+                                        <PhoneInput />
+                                    </label>
+                                </div>
                             </div>
                             <input type="hidden" className="text" value='Узнать стоимость квартиры' />
-                            <button className="pu_btn" celtype="getFlat" onClick={sendForm.sendForm}>узнать стоимость</button>
+                            <button class="btn_form">Отправить</button>
                         </form>
-                        <div className="clr"></div>
                     </div>
 
-                    <div className="popup_main pu_liter" style={{ display: "none" }}>
-                        <a href="#" className="closeform" onClick={close}></a>
-                        <div className="pu_tm">
-                            <span><l>Планировки</l></span> <b>Литера 1</b>
-                            <sub id='plan_types'>Все квартиры с предчистовой отделкой WHITE BOX</sub>
+                    <div style={{ display: "none" }} className="pu_inner pu_plan_main">
+                        <div className="closeform" onClick={close}><img src="img/closeform.svg" /></div>
+                        <div className="pu_title">
+                            Планировка <br /><k>1</k> корпуса
                         </div>
-                        <div className="liter_nav">
-                            <div className="liter_nav_el entrance_list">
-                                <span className="liter_text">Выберите подъезд</span>
-                                <div className="entr_in act" onClick={entranceClick} data="1">Подъезд 1</div>
-                                <div className="entr_in" onClick={entranceClick} data="2">Подъезд 2</div>
+                        <div className="pu_plan_nav">
+                            <div className="flat__nav_room">
+                                <div className="act">Подьезд 1</div>
+                                <div>Подьезд 2</div>
                             </div>
-                            <div className="liter_nav_el floor_sel">
-                                <span className="liter_text">Этаж</span>
-                                <Slider1 className="slid_style_react"
-                                    defaultValue={floor}
-                                    //value={floor}
+                            <div className="flat__nav_etaj">
+                                <div className="flat__nav_name">Выберите этаж</div>
+                                <Slider className="slid"
+                                    //defaultValue={floor}
+                                    value={floor}
                                     step={1}
-                                    min={2}
-                                    max={17}
+                                    min={1}
+                                    max={22}
                                     onChange={handleChange}
-                                    // aria-labelledby="range-slider2"
                                     valueLabelDisplay="on"
                                 />
                             </div>
                         </div>
-
-                        <div className="liter_img central_floor" data="central" style={{ display: "none" }}>
-                            <img src="/images/floor_img/central_floor.jpg" />
-                            <div className="lit_in fl_1" onClick={flatClick} id="21"></div>
-                            <div className="lit_in fl_2" onClick={flatClick} id="22"></div>
-                            <div className="lit_in fl_3" onClick={flatClick} id="23"></div>
-                            <div className="lit_in fl_4" onClick={flatClick} id="24"></div>
-                            <div className="lit_in fl_5" onClick={flatClick} id="25"></div>
-                            <div className="lit_in fl_6" onClick={flatClick} id="26"></div>
-                            <div className="lit_in fl_7" onClick={flatClick} id="27"></div>
-                            <div className="lit_in fl_8" onClick={flatClick} id="28"></div>
-                            <div className="lit_in fl_9" onClick={flatClick} id="29"></div>
-                            <div className="lit_in fl_10" onClick={flatClick} id="30"></div>
+                        <div className="pu_plan_img ppi_p1">
+                            <div className="ppi_b ppi_b1"></div>
+                            <div className="ppi_b ppi_b2"></div>
+                            <div className="ppi_b ppi_b3"></div>
+                            <div className="ppi_b ppi_b4"></div>
+                            <div className="ppi_b ppi_b5"></div>
+                            <div className="ppi_b ppi_b6"></div>
+                            <div className="ppi_b ppi_b7"></div>
+                            <div className="ppi_b ppi_b8"></div>
+                            <div className="ppi_b ppi_b9"></div>
+                            <div className="ppi_b ppi_b10"></div>
+                            <img src="img/pu_plan_main.png" />
                         </div>
-
-                        <div className="liter_img forest_floor_1" data="milenium" entrance="1" style={{ display: "none" }}>
-                            <img src="/images/floor_img/forest_floor_1.jpg" />
-                            <div className="lit_in fl_1" onClick={flatClick} id="31"></div>
-                            <div className="lit_in fl_2" onClick={flatClick} id="32"></div>
-                            <div className="lit_in fl_3" onClick={flatClick} id="33"></div>
-                            <div className="lit_in fl_4" onClick={flatClick} id="34"></div>
-                            <div className="lit_in fl_5" onClick={flatClick} id="35"></div>
-                            <div className="lit_in fl_6" onClick={flatClick} id="36"></div>
-                            <div className="lit_in fl_7" onClick={flatClick} id="37"></div>
-                            <div className="lit_in fl_8" onClick={flatClick} id="38"></div>
-                            <div className="lit_in fl_9" onClick={flatClick} id="39"></div>
-                            <div className="lit_in fl_10" onClick={flatClick} id="40"></div>
-                            <div className="lit_in fl_11" onClick={flatClick} id="41"></div>
-                        </div>
-
-                        <div className="liter_img forest_floor_2" data="milenium" entrance="2" style={{ display: "none" }}>
-                            <img src="/images/floor_img/forest_floor_2.jpg" />
-                            <div className="lit_in fl_1" onClick={flatClick} id="42"></div>
-                            <div className="lit_in fl_2" onClick={flatClick} id="43"></div>
-                            <div className="lit_in fl_3" onClick={flatClick} id="44"></div>
-                            <div className="lit_in fl_4" onClick={flatClick} id="45"></div>
-                            <div className="lit_in fl_5" onClick={flatClick} id="46"></div>
-                            <div className="lit_in fl_6" onClick={flatClick} id="47"></div>
-                            <div className="lit_in fl_7" onClick={flatClick} id="48"></div>
-                            <div className="lit_in fl_8" onClick={flatClick} id="49"></div>
-                            <div className="lit_in fl_9" onClick={flatClick} id="50"></div>
-                        </div>
-
-                        <div className="liter_img milenium_floor_1" data="forest" entrance="1" style={{ display: "none" }}>
-                            <img src="/images/floor_img/milenium_floor_1.jpg" />
-                            <div className="lit_in fl_1" onClick={flatClick} id="1"></div>
-                            <div className="lit_in fl_2" onClick={flatClick} id="2"></div>
-                            <div className="lit_in fl_3" onClick={flatClick} id="3"></div>
-                            <div className="lit_in fl_4" onClick={flatClick} id="4"></div>
-                            <div className="lit_in fl_5" onClick={flatClick} id="5"></div>
-                            <div className="lit_in fl_6" onClick={flatClick} id="6"></div>
-                            <div className="lit_in fl_7" onClick={flatClick} id="7"></div>
-                            <div className="lit_in fl_8" onClick={flatClick} id="8"></div>
-                            <div className="lit_in fl_9" onClick={flatClick} id="9"></div>
-                            <div className="lit_in fl_10" onClick={flatClick} id="10"></div>
-                        </div>
-
-                        <div className="liter_img milenium_floor_2" data="forest" entrance="2">
-                            <img src="/images/floor_img/milenium_floor_2.jpg" />
-                            <div className="lit_in fl_1" onClick={flatClick} id="11"></div>
-                            <div className="lit_in fl_2" onClick={flatClick} id="12"></div>
-                            <div className="lit_in fl_3" onClick={flatClick} id="13"></div>
-                            <div className="lit_in fl_4" onClick={flatClick} id="14"></div>
-                            <div className="lit_in fl_5" onClick={flatClick} id="15"></div>
-                            <div className="lit_in fl_6" onClick={flatClick} id="16"></div>
-                            <div className="lit_in fl_7" onClick={flatClick} id="17"></div>
-                            <div className="lit_in fl_8" onClick={flatClick} id="18"></div>
-                            <div className="lit_in fl_9" onClick={flatClick} id="19"></div>
-                            <div className="lit_in fl_10" onClick={flatClick} id="20"></div>
-                        </div>
-
                     </div>
 
                 </div>

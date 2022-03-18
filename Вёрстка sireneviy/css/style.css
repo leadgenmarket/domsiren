@@ -59,6 +59,10 @@
     font-style: normal;
 }
 
+.err{
+    color: rgb(202, 59, 59) !important;
+}
+
 /*reset light*/
 html, body {
     margin: 0;

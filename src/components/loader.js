@@ -9,6 +9,12 @@ import Presentation from "./presentation";
 import Comfort from "./comfort";
 import Transport from "./transport";
 import Plan_price from "./plan_price";
+import Podbor from "./podbor";
+import Ipoteka from "./ipoteka";
+import { Galery } from "./galery";
+import Hod_str from "./hod_str";
+import Contacts from "./contacts";
+import { Footer } from "./footer";
 
 
 
@@ -23,7 +29,13 @@ export const Loader = () => {
         <Comfort />,
         <Genplan />,
         <Transport />,
-        <Plan_price />
+        <Plan_price />,
+        <Podbor />,
+        <Ipoteka />,
+        <Galery />,
+        <Hod_str />,
+        <Contacts />,
+        <Footer />
     ]
 
     const loaded = useContext(BlocksContext)

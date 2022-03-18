@@ -2,10 +2,10 @@
 
 export const useSendForm = () => {
     const addError = (element) => {
-        element.closest('.form_in').querySelector('label').classList.add('Mui-error')
+        element.classList.add('err')
     }
     const removeError = (element) => {
-        element.closest('.form_in').querySelector('label').classList.remove('Mui-error')
+        element.classList.remove('err')
     }
     const checkPhone = (element) => {
         if (element.value.indexOf('_') != -1 || element.value.length !== 18) {
@@ -147,14 +147,14 @@ export const useSendForm = () => {
             document.querySelectorAll('.popup_main').forEach((elem) => {
                 elem.style.display = "none"
             })
-            document.querySelector('.popup_rgba').style.display = "block"
+            document.querySelector('.pu_rgba').style.display = "block"
             document.querySelector('.pu_thx').style.display = "block"
             console.log(senddata)
-            fetch("fd_log/ajax.php", requestOptions)
+            /*fetch("fd_log/ajax.php", requestOptions)
                 .then(data => data.ok)
                 .then(response => {
                     showAlert(senddata, celtype)
-                });
+                });*/
         }
     }
     return { sendForm }
