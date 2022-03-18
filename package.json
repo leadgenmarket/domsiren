@@ -1,5 +1,5 @@
 {
-  "name": "solnechnyj_park",
+  "name": "dom_na_sirenevoy",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,11 +16,11 @@
     "react-input-mask": "^3.0.0-alpha.2",
     "react-konva": "^17.0.2-5",
     "react-lightgallery": "^0.9.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.0",
     "react-slick": "^0.28.0",
     "react-transition-group": "^4.4.2",
     "react-yandex-maps": "^4.6.0",
+    "swiper": "^8.0.7",
     "web-vitals": "^1.1.0",
     "yandex-map-react": "^1.1.1"
   },

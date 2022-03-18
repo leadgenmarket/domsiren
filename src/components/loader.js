@@ -11,6 +11,9 @@ import { Hod_str } from './hod_str';
 import { Contacts } from './contacts';
 import { Footer } from './footer';
 import { Example } from "./example";
+import { Infra } from "./infra";
+import Presentation from "./presentation";
+import Comfort from "./comfort";
 
 
 
@@ -18,8 +21,11 @@ import { Example } from "./example";
 export const Loader = () => {
 
     const blocksImports = [
-
-        <Main />,
+        <Menu />,
+        <Header />,
+        <Infra />,
+        <Presentation />,
+        <Comfort />,
 
         // <Header />,
         // <Example />,

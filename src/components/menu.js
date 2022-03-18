@@ -66,19 +66,23 @@ export const Menu = () => {
     }, [])
 
     return (
-        <section className="menu">
-            <div className="cw_main">
-                <div className="menu_btn" onClick={showPopup} data="popup_menu"><span>Меню</span></div>
-                <logo><img src="images/logo.jpg" /></logo>
-                <div className="top_menu">
-                    <a href="how_buy" onClick={clickMenu}><span>Ипотека</span></a>
-                    <a href="plan_price" onClick={clickMenu}><span>Планировки и цены</span></a>
-                    <a href="park_get_flat" onClick={clickMenu}><span>Инфраструктура</span></a>
-                    <a href="contacts" onClick={clickMenu}><span>Контакты</span></a>
+        <section className="hl_top plr">
+            <div className="wmain">
+                <div className="hl_top__l">
+                    <div className="logo">дом<br />на сиреневой</div>
+                    <div className="btn_nav_mobile">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
-                <div className="menu_right">
-                    <a className="call_phone roistat-phone" href="tel:+84959880202">8 495 988 02 02</a>
+                <div className="hl_nav">
+                    <a href="#">Ипотека от 0,1 %</a>
+                    <a href="#">Планировки и цены</a>
+                    <a href="#">Инфраструктура</a>
+                    <a href="#">Контакты</a>
                 </div>
+                <a className="hl_phone" href="#"><img src="img/hl_phone_ico.png" />8 499 123 45 67</a>
             </div>
         </section>
     )
