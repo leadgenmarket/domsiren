@@ -2,7 +2,7 @@ import { React, useEffect, useState } from "react"
 import Slider from '@material-ui/core/Slider';
 import Slider1 from '@material-ui/core/Slider';
 
-export const Plan_price = () => {
+const Plan_price = () => {
     const url = "https://sunny-park.ru/"
     const [floor, setFloor] = useState([4, 15]);
     const [area, setArea] = useState([27, 84]);
@@ -106,65 +106,167 @@ export const Plan_price = () => {
                 filterFlats(result, area, rooms, flatsToShow, otdelka)
             })
     }, [])
-    return (
-        <section className="plan_price">
-            <div className="cw_main">
-                <div className="tm">
-                    <span><l>Выберите </l></span> квартиру
-                    <sub>по нужным параметрам</sub>
-                </div>
-                <div className="plrp_nav">
-                    <div className="plpr_nav_el room_list">
-                        <span className="plpr_text">Комнаты:</span>
-                        <div onClick={roomsClick} className={rooms == "all" ? "rl_in act" : "rl_in"} data="all">Все</div>
-                        <div onClick={roomsClick} className={rooms == 1 ? "rl_in act" : "rl_in"} data="1"> 1</div>
-                        <div onClick={roomsClick} className={rooms == 2 ? "rl_in act" : "rl_in"} data="2">2</div>
-                        <div onClick={roomsClick} className={rooms == 3 ? "rl_in act" : "rl_in"} data="3">3</div>
-                    </div>
-                    <div className="plpr_nav_el floor_sel">
-                        <span className="plpr_text">Этаж</span>
-                        <p>с {floor[0]}</p>
-                        <p>по {floor[1]}</p>
-                        <Slider className="slid_style_react"
-                            //defaultValue={floor}
-                            value={floor}
-                            step={1}
-                            min={2}
-                            max={17}
-                            onChange={handleChange}
-                            valueLabelDisplay="on"
-                        />
-                    </div>
-                    <div className="plpr_nav_el floor_sel">
-                        <span className="plpr_text">Площадь, м<sup>2</sup></span>
-                        <p>от {area[0]}</p>
-                        <p>до {area[1]}</p>
-                        <Slider1 className="slid_style_react"
-                            //defaultValue={floor}
-                            value={area}
-                            step={1}
-                            min={25}
-                            max={120}
-                            onChange={handleChange1}
-                            valueLabelDisplay="on"
-                        />
-                    </div>
-                    <div className="plpr_nav_el rem_list">
-                        <div onClick={(e) => { e.preventDefault(); setOtdelka(false); filterFlats(flats, area, rooms, flatsToShow, otdelka) }} className={otdelka === false ? "rl_in act" : "rl_in"}>без отделки</div>
-                        <div onClick={(e) => { e.preventDefault(); setOtdelka(true); filterFlats(flats, area, rooms, flatsToShow, otdelka) }} className={otdelka === true ? "rl_in act" : "rl_in"}>White Box</div>
-                    </div>
-                </div>
-                <div className="plan_list">
-                    {filteredFlats.map((flat) => {
-                        return <div key={flat["id"]} id={flat["id"]} className="pl_in" onClick={flatClick} data="pu_flat">
-                            <div className="plpr_name"><span>{kvTitle(flat.class)} {flat.info}м<sup>2</sup></span></div>
-                            <div className="plpr_img"><img src={url + "/" + flat.img} /></div>
-                            <a href="#" onClick={flatClick} id={flat["id"]}>Узнать стоимость</a>
-                        </div>
-                    })}
-                    {!hideMore ? <a onClick={moreClick} className="more_flat">Показать еще</a> : ""}
-                </div>
-            </div>
-        </section >
+    return (<section className="flat plr">
+            <div className="wmain">
+            	<div className="tm">Выберите квартиру</div>
+            	<div className="tm__dop">по нужным параметрам</div>
+            	<div className="flat__nav">
+        			<div className="flat__nav_room">
+        				<div>все</div>
+        				<div className="act">студии</div>
+        				<div>1 - ком</div>
+        				<div>2 - ком</div>
+        				<div>3 - ком</div>
+        			</div>
+        			<div className="flat__nav_etaj">
+        				<div className="flat__nav_name">Выберите этаж</div>
+        				<div id="slid__etaj" className="slid"></div>
+        			</div>
+        		</div>
+        		<div className="flat__list swiper-container">
+					<div className="swiper-wrapper">
+						<div className="swiper-slide">
+							<div className="flat__item">
+	        					<div className="flat__item_img"><img src="img/flat_img1.png" /></div>
+	        					<div className="flat__item_content">
+	        						<div className="flat__item_content_head">
+	        							<div className="flat__item_name">
+	        								1-комнатная Квартира
+	        							</div>
+	        							<div className="flat__item_area">
+	        								площадь
+	        								<span>67.5 м²</span>
+	        							</div>
+	        						</div>
+	        						<div className="flat__item_btn">
+	        							Узнать стоимость<img src="img/btn_coast_str.png" />
+	        						</div>
+	        					</div>
+	        				</div>
+						</div>
+						<div className="swiper-slide">
+							<div className="flat__item">
+	        					<div className="flat__item_img"><img src="img/flat_img1.png" /></div>
+	        					<div className="flat__item_content">
+	        						<div className="flat__item_content_head">
+	        							<div className="flat__item_name">
+	        								1-комнатная Квартира
+	        							</div>
+	        							<div className="flat__item_area">
+	        								площадь
+	        								<span>67.5 м²</span>
+	        							</div>
+	        						</div>
+	        						<div className="flat__item_btn">
+	        							Узнать стоимость<img src="img/btn_coast_str.png" />
+	        						</div>
+	        					</div>
+	        				</div>
+						</div>
+						<div className="swiper-slide">
+							<div className="flat__item">
+	        					<div className="flat__item_img"><img src="img/flat_img1.png" /></div>
+	        					<div className="flat__item_content">
+	        						<div className="flat__item_content_head">
+	        							<div className="flat__item_name">
+	        								1-комнатная Квартира
+	        							</div>
+	        							<div className="flat__item_area">
+	        								площадь
+	        								<span>67.5 м²</span>
+	        							</div>
+	        						</div>
+	        						<div className="flat__item_btn">
+	        							Узнать стоимость<img src="img/btn_coast_str.png" />
+	        						</div>
+	        					</div>
+	        				</div>
+						</div>
+						<div className="swiper-slide">
+							<div className="flat__item">
+	        					<div className="flat__item_img"><img src="img/flat_img1.png" /></div>
+	        					<div className="flat__item_content">
+	        						<div className="flat__item_content_head">
+	        							<div className="flat__item_name">
+	        								1-комнатная Квартира
+	        							</div>
+	        							<div className="flat__item_area">
+	        								площадь
+	        								<span>67.5 м²</span>
+	        							</div>
+	        						</div>
+	        						<div className="flat__item_btn">
+	        							Узнать стоимость<img src="img/btn_coast_str.png" />
+	        						</div>
+	        					</div>
+	        				</div>
+						</div>
+						<div className="swiper-slide">
+							<div className="flat__item">
+	        					<div className="flat__item_img"><img src="img/flat_img1.png" /></div>
+	        					<div className="flat__item_content">
+	        						<div className="flat__item_content_head">
+	        							<div className="flat__item_name">
+	        								1-комнатная Квартира
+	        							</div>
+	        							<div className="flat__item_area">
+	        								площадь
+	        								<span>67.5 м²</span>
+	        							</div>
+	        						</div>
+	        						<div className="flat__item_btn">
+	        							Узнать стоимость<img src="img/btn_coast_str.png" />
+	        						</div>
+	        					</div>
+	        				</div>
+						</div>
+						<div className="swiper-slide">
+							<div className="flat__item">
+	        					<div className="flat__item_img"><img src="img/flat_img1.png" /></div>
+	        					<div className="flat__item_content">
+	        						<div className="flat__item_content_head">
+	        							<div className="flat__item_name">
+	        								1-комнатная Квартира
+	        							</div>
+	        							<div className="flat__item_area">
+	        								площадь
+	        								<span>67.5 м²</span>
+	        							</div>
+	        						</div>
+	        						<div className="flat__item_btn">
+	        							Узнать стоимость<img src="img/btn_coast_str.png" />
+	        						</div>
+	        					</div>
+	        				</div>
+						</div>
+						<div className="swiper-slide">
+							<div className="flat__item">
+	        					<div className="flat__item_img"><img src="img/flat_img1.png" /></div>
+	        					<div className="flat__item_content">
+	        						<div className="flat__item_content_head">
+	        							<div className="flat__item_name">
+	        								1-комнатная Квартира
+	        							</div>
+	        							<div className="flat__item_area">
+	        								площадь
+	        								<span>67.5 м²</span>
+	        							</div>
+	        						</div>
+	        						<div className="flat__item_btn">
+	        							Узнать стоимость<img src="img/btn_coast_str.png" />
+	        						</div>
+	        					</div>
+	        				</div>
+						</div>
+					</div>
+					<div className="flat__list_nav">
+						<div className="slider_str slider_str_l"><img src="img/slider_str_l.png" /></div>
+						<div className="slider_str slider_str_r"><img src="img/slider_str_r.png" /></div>
+					</div>
+				</div>
+        	</div>
+        </section>
     )
 }
+
+export default Plan_price

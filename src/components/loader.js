@@ -3,17 +3,12 @@ import { BlocksContext } from "../context/blocksContext"
 import { Popups } from "./popups";
 import { Menu } from './menu';
 import { Header } from './header';
-import { Genplan } from './genplan';
-import { Plan_price } from './plan_price';
-import { How_buy } from './how_buy';
-import { Galery } from './galery';
-import { Hod_str } from './hod_str';
-import { Contacts } from './contacts';
-import { Footer } from './footer';
-import { Example } from "./example";
+import Genplan from './genplan';
 import { Infra } from "./infra";
 import Presentation from "./presentation";
 import Comfort from "./comfort";
+import Transport from "./transport";
+import Plan_price from "./plan_price";
 
 
 
@@ -26,17 +21,9 @@ export const Loader = () => {
         <Infra />,
         <Presentation />,
         <Comfort />,
-
-        // <Header />,
-        // <Example />,
-        // <Menu />,
-        // <Genplan />,
-        // <Plan_price />,
-        // <How_buy />,
-        // <Galery />,
-        // <Hod_str />,
-        // <Contacts />,
-        // <Footer />,
+        <Genplan />,
+        <Transport />,
+        <Plan_price />
     ]
 
     const loaded = useContext(BlocksContext)

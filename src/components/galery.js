@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Slider from "react-slick"
-import "./css/slick.min.css"
-import "./css/slick-theme.min.css"
+//import "./css/slick.min.css"
+//import "./css/slick-theme.min.css"
 
 
 
