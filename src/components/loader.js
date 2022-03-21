@@ -20,15 +20,14 @@ import { Footer } from "./footer";
 
 
 export const Loader = () => {
-
     const blocksImports = [
         <Menu />,
         <Header />,
         <Infra />,
         <Presentation />,
         <Comfort />,
-        <Genplan />,
-        <Transport />,
+        /*<Genplan />,*/
+        < Transport />,
         <Plan_price />,
         <Podbor />,
         <Ipoteka />,
