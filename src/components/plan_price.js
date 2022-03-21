@@ -21,25 +21,25 @@ const Plan_price = () => {
 
 	const kvTitle = (classKv) => {
 		switch (classKv) {
-			case "0":
+			case 0:
 				return "Квартира-студия"
-			case "1":
+			case 1:
 				return "1-комнатная Квартира"
-			case "2":
+			case 2:
 				return "2-комнатная Квартира"
-			case "3":
+			case 3:
 				return "3-комнатная Квартира"
 		}
 	}
 	const kvTitlePopup = (classKv) => {
 		switch (classKv) {
-			case "0":
+			case 0:
 				return "Квартира-студия"
-			case "1":
+			case 1:
 				return "Однокомнатная Квартира"
-			case "2":
+			case 2:
 				return "Двухкомнатная Квартира"
-			case "3":
+			case 3:
 				return "Трехкомнатная Квартира"
 		}
 	}
@@ -49,7 +49,7 @@ const Plan_price = () => {
 		let id = parseInt(e.currentTarget.getAttribute('id'))
 		let flat
 		const headers = { 'Content-Type': 'application/json' }
-		fetch(process.env.REACT_APP_BACKEND_URL + "/flats_react.php?id=" + id, headers)
+		fetch(process.env.REACT_APP_BACKEND_URL + "/flats.php?ID=" + id, headers)
 			.then(res => res.json())
 			.then((result) => {
 				flat = result
@@ -71,13 +71,34 @@ const Plan_price = () => {
 
 
 	useEffect(() => {
-		fetch(process.env.REACT_APP_BACKEND_URL + "/flats_react.php", {})
+		fetch(process.env.REACT_APP_BACKEND_URL + "/flats.php", {})
 			.then(res => res.json())
 			.then((result) => {
-				console.log(result)
-				setFlats(result)
+				let flats = []
+				result.map((flat) => {
+					let floors = []
+					if (flat.floors != "") {
+						let tmpFloor = flat.floors.split(',')
+						tmpFloor.forEach((fl)=>{
+							floors.push(parseInt(fl))
+						})
+					}
+					flat.floors = floors
+					flats.push(flat)
+				})
+				setFlats(flats)
 			})
 	}, [])
+
+	const checkFloorsInRange = (floors) => {
+		let flag = false
+		floors.forEach(fl=>{
+			if (fl >= floor[0] && fl <= floor[1]) {
+				flag = true
+			}
+		})
+		return flag
+	}
 	return (<section className="flat plr">
 		<div className="wmain">
 			<div className="tm">Выберите квартиру</div>
@@ -131,18 +152,18 @@ const Plan_price = () => {
 				}}
 			>
 				{flats.map((flat) => {
-					if ((type == "all" || flat.class == type) && (flat.floor[0] >= floor[0] && flat.floor[1] <= floor[1])) {
+					if ((type == "all" || flat.rooms == type) && checkFloorsInRange(flat.floors)) {
 						return <SwiperSlide onClick={flatClick} id={flat.id}>
 							<div className="flat__item">
-								<div className="flat__item_img"><img src={process.env.REACT_APP_BACKEND_URL + "/" + flat.img} /></div>
+								<div className="flat__item_img"><img src={process.env.REACT_APP_PLANS_URL + flat.photo} /></div>
 								<div className="flat__item_content">
 									<div className="flat__item_content_head">
 										<div className="flat__item_name">
-											{kvTitle(flat.class)}
+											{kvTitle(flat.rooms)}
 										</div>
 										<div className="flat__item_area">
 											площадь
-											<span>{flat.info} м²</span>
+											<span>{flat.total_area} м²</span>
 										</div>
 									</div>
 									<div className="flat__item_btn">
