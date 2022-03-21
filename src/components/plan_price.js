@@ -46,25 +46,24 @@ const Plan_price = () => {
 
 	const flatClick = (e) => {
 		e.preventDefault()
-		let id = parseInt(e.currentTarget.getAttribute('id'))
+		let id = e.currentTarget.getAttribute('id')
 		let flat
 		const headers = { 'Content-Type': 'application/json' }
 		fetch(process.env.REACT_APP_BACKEND_URL + "/flats.php?ID=" + id, headers)
 			.then(res => res.json())
 			.then((result) => {
 				flat = result
-				console.log(result)
 				document.querySelector('.pu_rgba').style.display = "block"
 				document.querySelectorAll('.pu_inner').forEach(el => {
 					el.style.display = "none"
 				});
 				document.querySelector('.pu_flat').style.display = "block"
 				document.querySelector('body').classList.add('overflow')
-				document.querySelector('#sq_all').innerHTML = flat.info + " М²"
-				document.querySelector('#sq_zhil').innerHTML = flat.zhil + " М²"
-				document.querySelector('.pu_flat .pu_title').innerHTML = parse(kvTitlePopup(flat.class))
-				document.querySelector('.pu_flat .pu_flat_r img').setAttribute('src', process.env.REACT_APP_BACKEND_URL + "/" + flat.img)
-				document.querySelector('.pu_flat input.text').value = `Узнать стоимость квратиры: Кол-во комнат - ${flat.class} Этаж - ${floor[0]}:${floor[1]}  Жилая площадь - ${flat.info}`
+				document.querySelector('#sq_all').innerHTML = flat.total_area + " М²"
+				document.querySelector('#sq_zhil').innerHTML = flat.living_area + " М²"
+				document.querySelector('.pu_flat .pu_title').innerHTML = parse(kvTitlePopup(flat.rooms))
+				document.querySelector('.pu_flat .pu_flat_r img').setAttribute('src', process.env.REACT_APP_PLANS_URL + flat.photo)
+				document.querySelector('.pu_flat input.text').value = `Узнать стоимость квратиры: Кол-во комнат - ${flat.rooms} Этаж - ${flat.floors}  Общая площадь - ${flat.total_area}`
 			})
 	}
 
@@ -153,7 +152,7 @@ const Plan_price = () => {
 			>
 				{flats.map((flat) => {
 					if ((type == "all" || flat.rooms == type) && checkFloorsInRange(flat.floors)) {
-						return <SwiperSlide onClick={flatClick} id={flat.id}>
+						return <SwiperSlide onClick={flatClick} id={flat.ID}>
 							<div className="flat__item">
 								<div className="flat__item_img"><img src={process.env.REACT_APP_PLANS_URL + flat.photo} /></div>
 								<div className="flat__item_content">
