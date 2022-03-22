@@ -1445,7 +1445,7 @@ input {
 }
 
 .flat__item_name {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     color: #953185;
     text-transform: uppercase;
@@ -1907,6 +1907,7 @@ input {
 .contact {
     padding-top: 175px;
     padding-bottom: 93px;
+    overflow: hidden;
 }
 
 .contact .wmain {
@@ -2469,6 +2470,15 @@ input {
     top: 0.5%;
     width: 38%;
     height: 30.7%;
+}
+
+.MuiSlider-root {
+    padding: 0 !important;
+    color: #711f64 !important;
+}
+
+.MuiSlider-rail {
+    background: #eee !important;
 }
 
 

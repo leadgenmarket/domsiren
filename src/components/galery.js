@@ -19,14 +19,21 @@ export const Galery = () => {
                 >
                     <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img1.jpg" /></a></SwiperSlide>
                     <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img2.jpg" /></a></SwiperSlide>
-                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img1.jpg" /></a></SwiperSlide>
-                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img2.jpg" /></a></SwiperSlide>
-                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img1.jpg" /></a></SwiperSlide>
-                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img2.jpg" /></a></SwiperSlide>
-                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img1.jpg" /></a></SwiperSlide>
-                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img2.jpg" /></a></SwiperSlide>
-                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img1.jpg" /></a></SwiperSlide>
-                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img2.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img3.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img4.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img5.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img6.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img7.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img8.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img9.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img10.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img11.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img12.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img13.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img14.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img15.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img16.jpg" /></a></SwiperSlide>
+                    <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img17.jpg" /></a></SwiperSlide>
                 </Swiper>
             </div>
             <div class="gallery__content">

@@ -23,7 +23,7 @@ const Contacts = () => {
                     <li>
                         <div class="cont_list__title"><i><img src="img/cont_ico2.png" /></i>Телефон</div>
                         <div class="cont_list__info">
-                            <a href="tel:+74951279553">+7 495 127 95 53</a>
+                            <a href="tel:84959880202">8 495 988 02 02</a>
                         </div>
                     </li>
                     <li>
@@ -47,7 +47,7 @@ const Contacts = () => {
                                     cursor: 'default',
                                     iconShadow: true,
                                     balloonclose: true,
-                                    iconImageHref: 'images/map_icon.png',
+                                    iconImageHref: 'img/map_ico.png',
                                     balloonPanelMaxMapArea: 0,
                                 }}
                             />

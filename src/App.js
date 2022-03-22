@@ -1,4 +1,3 @@
-import './App.css';
 import "./css/style.css";
 import "./css/swiper.css"
 import { BlocksContext } from "./context/blocksContext"

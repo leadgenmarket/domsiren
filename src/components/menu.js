@@ -77,12 +77,12 @@ export const Menu = () => {
                     </div>
                 </div>
                 <div className="hl_nav">
-                    <a href="#">Ипотека от 0,1 %</a>
+                    <a href="#">Ипотека</a>
                     <a href="#">Планировки и цены</a>
                     <a href="#">Инфраструктура</a>
                     <a href="#">Контакты</a>
                 </div>
-                <a className="hl_phone" href="#"><img src="img/hl_phone_ico.png" />8 499 123 45 67</a>
+                <a className="hl_phone" href="tel:84959880202"><img src="img/hl_phone_ico.png" />8 495 988 02 02</a>
             </div>
         </section>
     )

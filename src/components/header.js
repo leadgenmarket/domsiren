@@ -14,7 +14,7 @@ export const Header = () => {
             <div className="head_price">
                 <div>
                     квартиры от
-                    <span>4.1</span>
+                    <span>4.4</span>
                     млн. ₽
                 </div>
             </div>

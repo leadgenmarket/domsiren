@@ -125,7 +125,7 @@ const Plan_price = () => {
 			</div>
 			<Swiper
 				speed={600}
-				slidesPerView={4}
+				slidesPerView={1}
 				spaceBetween={0}
 				loop={false}
 				autoHeight={true}

@@ -255,7 +255,7 @@ export const Popups = () => {
                     <div className="pu_inner popup_menu" style={{ display: "none" }}>
                         <a href="#" className="closeform" onClick={close}></a>
                         <div className="menu_list">
-                            <a href="near_house" onClick={clickMenu}><span>Ипотека от 0,1 %</span></a>
+                            <a href="near_house" onClick={clickMenu}><span>Ипотека</span></a>
                             <a href="plan_price" onClick={clickMenu}><span>Планировки и цены</span></a>
                             <a href="how_buy" onClick={clickMenu}><span>Инфраструктура</span></a>
                             <a href="contacts" onClick={clickMenu}><span>Контакты</span></a>
