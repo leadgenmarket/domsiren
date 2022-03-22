@@ -1,3 +1,6 @@
+.err {
+    color: rgb(226, 55, 55);
+}
 /*fonts*/
 @font-face {
     font-family: 'Gilroy';
