@@ -17,9 +17,9 @@ export const Menu = () => {
 
     const handleScroll = (event) => {
         if (window.scrollY < 50) {
-            document.querySelector('body').classList.add('scroll_act')
-        } else {
             document.querySelector('body').classList.remove('scroll_act')
+        } else {
+            document.querySelector('body').classList.add('scroll_act')
         }
     }
 
