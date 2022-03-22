@@ -16,21 +16,11 @@ export const Menu = () => {
     }
 
     const handleScroll = (event) => {
-
-        let lastPosition = parseInt(document.querySelector('html').getAttribute('lastPosition'))
-        if (lastPosition != undefined) {
-            if (lastPosition < window.scrollY + 100) {
-                //console.log('down')
-                document.querySelectorAll('section').forEach((section) => {
-                    if (window.scrollY + (window.innerHeight / 2.5) > section.offsetTop && !section.classList.contains('showed')) {
-                        section.classList.add('showed')
-                    }
-                })
-            } else {
-                //console.log('up')
-            }
+        if (window.scrollY < 50) {
+            document.querySelector('body').classList.add('scroll_act')
+        } else {
+            document.querySelector('body').classList.remove('scroll_act')
         }
-        document.querySelector('html').setAttribute('lastPosition', window.scrollY)
     }
 
     const clickMenu = (e) => {
