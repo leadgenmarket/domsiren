@@ -78,7 +78,7 @@ const Plan_price = () => {
 					let floors = []
 					if (flat.floors != "") {
 						let tmpFloor = flat.floors.split(',')
-						tmpFloor.forEach((fl)=>{
+						tmpFloor.forEach((fl) => {
 							floors.push(parseInt(fl))
 						})
 					}
@@ -91,7 +91,7 @@ const Plan_price = () => {
 
 	const checkFloorsInRange = (floors) => {
 		let flag = false
-		floors.forEach(fl=>{
+		floors.forEach(fl => {
 			if (fl >= floor[0] && fl <= floor[1]) {
 				flag = true
 			}
@@ -151,7 +151,7 @@ const Plan_price = () => {
 				}}
 			>
 				{flats.map((flat) => {
-					if ((type == "all" || flat.rooms == type) && checkFloorsInRange(flat.floors)) {
+					if ((type == "all" || flat.rooms == type)) { //&& checkFloorsInRange(flat.floors)
 						return <SwiperSlide onClick={flatClick} id={flat.ID}>
 							<div className="flat__item">
 								<div className="flat__item_img"><img src={process.env.REACT_APP_PLANS_URL + flat.photo} /></div>
