@@ -11,10 +11,10 @@ export const Galery = () => {
                     spaceBetween={23}
                     slidesPerView={"auto"}
                     centeredSlides={true}
-                    loop={false}
+                    loop={true}
                     autoHeight={true}
                     onSlideChange={() => { swiper != undefined ? setIndex(swiper.realIndex + 1) : setIndex(sliderIndex) }}
-                    onSwiper={(swiper) => setSwiper(swiper)}
+                    onSwiper={(swiper) => {console.log(swiper); swiper.slideTo(1); setSwiper(swiper)}}
                     className={"gallery__slider"}
                 >
                     <SwiperSlide><a class="gallery__slide" href="#"><img src="img/gallery_img1.jpg" /></a></SwiperSlide>
@@ -46,7 +46,7 @@ export const Galery = () => {
                 <div class="gallery__slider_nav">
                     <div class="slider_str slider_str_l" onClick={() => { swiper.slidePrev() }}><img src="img/slider_str_l.png" /></div>
                     <div class="komfort__slider_nav_num">
-                        <span>{sliderIndex}</span>/<i>{swiper == undefined ? 0 : swiper.slides.length - 2}</i>
+                        <span>{sliderIndex}</span>/<i>{swiper == undefined ? 0 : 17}</i>
                     </div>
                     <div class="slider_str slider_str_r" onClick={() => { swiper.slideNext() }}><img src="img/slider_str_r.png" /></div>
                 </div>
