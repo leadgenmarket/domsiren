@@ -313,7 +313,7 @@ export const Popups = () => {
                                 <div className="in_2_inner">
                                     <label className="in_style">
                                         <i><img src="img/in_phone.png" /></i>
-                                        <input className="in_phone" type="text" value="Ваш телефон" data="Ваш телефон" inputmode="text" />
+                                        <PhoneInput />
                                     </label>
                                 </div>
                             </div>
