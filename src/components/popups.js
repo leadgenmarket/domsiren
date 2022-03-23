@@ -307,7 +307,7 @@ export const Popups = () => {
                                 <div className="in_2_inner">
                                     <label className="in_style">
                                         <i><img src="img/in_name.png" /></i>
-                                        <input type="text" value="Алексей" data="Алексей" />
+                                        <input type="text" name="name" placeholder="Ваше имя" />
                                     </label>
                                 </div>
                                 <div className="in_2_inner">
@@ -350,7 +350,7 @@ export const Popups = () => {
                                 <div class="in_2_inner">
                                     <label class="in_style">
                                         <i><img src="img/in_name.png" /></i>
-                                        <input type="text" value="Имя" name="name" placeholder="Имя" />
+                                        <input type="text" name="name" placeholder="Ваше имя" />
                                     </label>
                                 </div>
                                 <div class="in_2_inner">
