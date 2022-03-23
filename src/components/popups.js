@@ -1,15 +1,8 @@
 import { React, useEffect, useState, useRef, useContext } from 'react';
-import TextField from '@material-ui/core/TextField'
-import NativeSelect from '@material-ui/core/NativeSelect';
 import Slider from "react-slick"
-import Slider1 from '@material-ui/core/Slider';
-import InputMask from 'react-input-mask'
-import Typography from '@material-ui/core/Typography';
 import { useSendForm } from '../hooks/send-from.hook'
 import { BlocksContext } from "../context/blocksContext"
-import parse from 'html-react-parser'
 import { FlatsContext } from '../context/flatsContext';
-import { LightgalleryProvider, LightgalleryItem, useLightgallery } from "react-lightgallery";
 import "lightgallery.js/dist/css/lightgallery.css";
 import { PhoneInput } from './phone_input';
 
@@ -327,7 +320,7 @@ export const Popups = () => {
                             <input type="hidden" className="dop-info" data="Первоначальный взнос: " value={pervIpot} />
                             <input type="hidden" className="dop-info" data="Срок: " value={srokIpot} />
                             <input type="hidden" className="text" value='Получить расчет' />
-                            <button className="btn_form">Отправить</button>
+                            <button className="btn_form" celtype={"getIpoteka"} onClick={sendForm.sendForm}>Отправить</button>
                         </form>
                     </div>
 
@@ -368,7 +361,7 @@ export const Popups = () => {
                                 </div>
                             </div>
                             <input type="hidden" className="text" value='Узнать стоимость квартиры' />
-                            <button class="btn_form">Отправить</button>
+                            <button class="btn_form" celtype={"getFlatCoast"} onClick={sendForm.sendForm}>Отправить</button>
                         </form>
                     </div>
 
