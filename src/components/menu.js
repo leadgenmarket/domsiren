@@ -72,7 +72,7 @@ export const Menu = () => {
                     <a href="#">Инфраструктура</a>
                     <a href="#">Контакты</a>
                 </div>
-                <a className="hl_phone" href="tel:84959880202"><img src="img/hl_phone_ico.png" />8 495 988 02 02</a>
+                <a className="hl_phone roistat-phone" href="tel:84959880202"><img src="img/hl_phone_ico.png" />8 495 988 02 02</a>
             </div>
         </section>
     )

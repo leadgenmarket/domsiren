@@ -4,7 +4,7 @@ import { YMaps, Map, ZoomControl, Placemark } from 'react-yandex-maps';
 const Contacts = () => {
     const [phone, setPhone] = useState("")
     useEffect(() => {
-        //setPhone(document.querySelector('.roistat-phone').innerHTML)
+        setPhone(document.querySelector('.roistat-phone').innerHTML.split('>')[1])
     }, [])
 
     return (<section class="contact plr">
@@ -23,7 +23,7 @@ const Contacts = () => {
                     <li>
                         <div class="cont_list__title"><i><img src="img/cont_ico2.png" /></i>Телефон</div>
                         <div class="cont_list__info">
-                            <a href="tel:84959880202">8 495 988 02 02</a>
+                            <a href={"tel:" + phone.replaceAll(" ", "").replaceAll("-", "").replaceAll("+", "") + "\""}>{phone}</a>
                         </div>
                     </li>
                     <li>
