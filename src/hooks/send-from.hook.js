@@ -144,7 +144,7 @@ export const useSendForm = () => {
                 },
                 body: JSON.stringify(senddata)
             };
-            document.querySelectorAll('.popup_main').forEach((elem) => {
+            document.querySelectorAll('.pu_inner').forEach((elem) => {
                 elem.style.display = "none"
             })
             document.querySelector('.pu_rgba').style.display = "block"
