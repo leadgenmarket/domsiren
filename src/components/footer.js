@@ -9,9 +9,9 @@ export const Footer = () => {
                 <div class="f_center">
                     Отправляя любую форму на сайте, вы соглашаетесь с <a href="#">политикой конфиденциальности</a> данного сайта, а также на получение рассылки на электронную почту, указанную в заявке. Не является публичной офертой
                 </div>
-                <a class="f_create" href="#">
+                {/* <a class="f_create" href="https://leadgen.market/">
                     <span>Разработка и лидогенерация</span><img src="img/create_logo.png" />
-                </a>
+                </a> */}
             </div>
         </section>
     )

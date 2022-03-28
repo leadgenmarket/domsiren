@@ -14,7 +14,7 @@ const Presentation = () => {
                     </div>
                     <div className="tm__info">
                         <i><img src="img/btn_get_flat_ico.png" /></i>
-                        <span>С планировками<br />и ценами</span>
+                        <span>С планировками<br />и преимуществами</span>
                     </div>
                 </div>
                 <form className="form_style">

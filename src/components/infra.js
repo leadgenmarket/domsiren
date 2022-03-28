@@ -42,7 +42,7 @@ export const Infra = () => {
                     </li>
                     <li>
                         <i>10</i>
-                        <span>минут пешком до торгового центра “Глобус”</span>
+                        <span>минут пешком до гипермаркета “Глобус”</span>
                     </li>
                 </ul>
                 <div className="infra_content__list_info">

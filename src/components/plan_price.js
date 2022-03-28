@@ -116,8 +116,8 @@ const Plan_price = () => {
 						//defaultValue={floor}
 						value={floor}
 						step={1}
-						min={1}
-						max={22}
+						min={2}
+						max={17}
 						onChange={handleChange}
 						valueLabelDisplay="on"
 					/>

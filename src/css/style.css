@@ -1641,6 +1641,7 @@ input {
 
 .ipoteka__list_item {
     display: flex;
+    cursor: pointer;
     -webkit-align-items: center;
             align-items: center;
 }
@@ -2245,6 +2246,10 @@ input {
             align-items: flex-start;
 }
 
+.pu_inner.pu_flat {
+    margin-top: 0 !important;
+}
+
 .pu_flat_info {
     display: block;
     margin: 0;
@@ -2484,7 +2489,68 @@ input {
     background: #eee !important;
 }
 
+.err {
+    color: red !important;
+    border-color: red !important;
+}
 
+
+/* @height */
+@media screen and (max-height: 1280px) {
+    .pu_title {
+        font-size: 42px;
+    }
+    .pu_flat_r img {
+        max-height: 370px;
+    }
+}
+
+@media screen and (max-height: 1060px) {
+    .pu_form {
+        padding-top: 20px;
+        margin-top: 20px;
+    }
+    .pu_form__title {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-height: 880px) {
+    .pu_flat_r img {
+        max-height: 270px;
+    }
+    .pu_form__title {
+        max-width: 100%;
+    }
+    .pu_form__title {
+        font-size: 22px;
+    }
+    .pu_flat {
+        margin-top: 20px;
+    }
+    .pu_form .in_2 {
+        margin-top: 10px;
+    }
+    .pu_form .btn_form {
+        margin-top: 15px;
+    }
+    .pu_title {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-height: 580px) {
+    .pu_flat_r img {
+        max-height: 220px;
+    }
+    .pu_title {
+        font-size: 24px;
+    }
+    .pu_form__title {
+        font-size: 20px;
+    }
+}
+/* @height end */
 
 /*@media*/
 @media screen and (max-width: 1800px) {

@@ -29,7 +29,7 @@ const Contacts = () => {
                     <li>
                         <div class="cont_list__title"><i><img src="img/cont_ico3.png" /></i>Время работы</div>
                         <div class="cont_list__info">
-                            пн-пт:  10:00 - 21:00; <br />сб-вск: 10:00 - 20:00
+                            пн-сб:  10:00 - 21:00; <br />вс: 10:00 - 20:00
                         </div>
                     </li>
                 </ul>
@@ -38,12 +38,12 @@ const Contacts = () => {
                 <YMaps>
                     <div>
                         <Map defaultState={{ center: [55.926317, 37.962464], zoom: 16, controls: [] }} style={{ width: "100%", height: "100%", position: "absolute" }}  >
-                            <Placemark geometry={[55.926317, 37.962464]}
+                            <Placemark geometry={[55.92626450507105,37.96327907672121]}
                                 options={{
                                     iconLayout: 'default#image',
                                     hideIconOnBalloonOpen: false,
                                     iconImageSize: [90, 82],
-                                    iconImageOffset: [-20, -54],
+                                    iconImageOffset: [-45, -54],
                                     cursor: 'default',
                                     iconShadow: true,
                                     balloonclose: true,

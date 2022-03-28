@@ -23,7 +23,7 @@ const Podbor = () => {
                 </div>
                 <div class="tm__info">
                     <i><img src="img/get_flat_ico.png" /></i>
-                    <span>Отправляем в <br />течении 30 минут</span>
+                    <span>Свяжемся в <br />течение 30 минут</span>
                 </div>
             </div>
             <form class="form_style">
@@ -41,8 +41,8 @@ const Podbor = () => {
                             //defaultValue={floor}
                             value={floor}
                             step={1}
-                            min={1}
-                            max={22}
+                            min={2}
+                            max={17}
                             onChange={handleChange}
                             valueLabelDisplay="on"
                         />
