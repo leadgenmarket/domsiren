@@ -5,7 +5,7 @@ const Transport = () => {
   const [activeMap, setActiveMap] = useState(0)
   const widgets = [
     "https://yandex.ru/map-widget/v1/-/CCUBVFf2pC",
-    "https://yandex.ru/map-widget/v1/-/CCUBVFvkWB"
+    "https://yandex.ru/map-widget/v1/-/CCUBVFT0-B"
   ]
   return (<section className="transport plr">
     <div className="wmain">
