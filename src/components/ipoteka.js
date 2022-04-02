@@ -89,6 +89,21 @@ const Ipoteka = () => {
                     </div>
                 </li>
             </ul>
+            <div className="ipoteka__logo_main">
+                <div className="ipoteka__logo">
+                    <span><img src="img/bank_logo1.png" /></span>
+                    <span><img src="img/bank_logo2.png" /></span>
+                    <span><img src="img/bank_logo3.png" /></span>
+                    <span><img src="img/bank_logo4.png" /></span>
+                    <span><img src="img/bank_logo5.png" /></span>
+                    <span><img src="img/bank_logo6.png" /></span>
+                    <span><img src="img/bank_logo7.png" /></span>
+                    <span><img src="img/bank_logo8.png" /></span>
+                    <span><img src="img/bank_logo9.png" /></span>
+                    <span><img src="img/bank_logo10.png" /></span>
+                    <span><img src="img/bank_logo11.png" /></span>
+                </div>
+            </div>
         </div>
     </section>)
 }
