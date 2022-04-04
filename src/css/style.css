@@ -793,6 +793,10 @@ input {
     z-index: 30;
 }
 
+    .komfort__r img {
+        display: block;
+    }
+
 .komfort__slider_decor {
     height: 221px;
     width: calc(570px + (100vw / 2 - 660px));
@@ -3500,7 +3504,7 @@ input {
         margin-right: -20px;
     }
     .komfort__slider {
-        width: 100%;
+        width: auto;
     }
     .ipoteka__list {
         display: block;

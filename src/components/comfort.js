@@ -42,7 +42,7 @@ const Comfort = () => {
                         </div>
                     </div>
                 </div >
-                <div className="komfort__r">
+                <div className="komfort__r komfort__slider">
                     <Swiper
                         speed={300}
                         spaceBetween={4}
@@ -54,14 +54,14 @@ const Comfort = () => {
                         onSwiper={(swiper) => setSwiper(swiper)}
                     >
                         <SwiperSlide><a href="#"><img src="img/about_slider_img1.jpg" /></a></SwiperSlide>
-                        <SwiperSlide><a href="#"><img src="img/about_slider_img1.jpg" /></a></SwiperSlide>
-                        <SwiperSlide><a href="#"><img src="img/about_slider_img1.jpg" /></a></SwiperSlide>
-                        <SwiperSlide><a href="#"><img src="img/about_slider_img1.jpg" /></a></SwiperSlide>
-                        <SwiperSlide><a href="#"><img src="img/about_slider_img1.jpg" /></a></SwiperSlide>
-                        <SwiperSlide><a href="#"><img src="img/about_slider_img1.jpg" /></a></SwiperSlide>
-                        <SwiperSlide><a href="#"><img src="img/about_slider_img1.jpg" /></a></SwiperSlide>
-                        <SwiperSlide><a href="#"><img src="img/about_slider_img1.jpg" /></a></SwiperSlide>
-                        <SwiperSlide><a href="#"><img src="img/about_slider_img1.jpg" /></a></SwiperSlide>
+                        <SwiperSlide><a href="#"><img src="img/about_slider_img2.jpg" /></a></SwiperSlide>
+                        <SwiperSlide><a href="#"><img src="img/about_slider_img3.jpg" /></a></SwiperSlide>
+                        <SwiperSlide><a href="#"><img src="img/about_slider_img4.jpg" /></a></SwiperSlide>
+                        <SwiperSlide><a href="#"><img src="img/about_slider_img5.jpg" /></a></SwiperSlide>
+                        <SwiperSlide><a href="#"><img src="img/about_slider_img6.jpg" /></a></SwiperSlide>
+                        <SwiperSlide><a href="#"><img src="img/about_slider_img7.jpg" /></a></SwiperSlide>
+                        <SwiperSlide><a href="#"><img src="img/about_slider_img8.jpg" /></a></SwiperSlide>
+                        <SwiperSlide><a href="#"><img src="img/about_slider_img9.jpg" /></a></SwiperSlide>
                     </Swiper>
                     <div className="komfort__slider_decor"></div>
                 </div>

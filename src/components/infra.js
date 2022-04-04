@@ -55,20 +55,7 @@ export const Infra = () => {
                 <div className='infra_map'>
                 <YMaps>
                         <div>
-                            <Map defaultState={{ center: [55.93392851263577,37.99402948736569], zoom: 15, controls: [] }} style={{ width: "100%", height: "100%", position: "absolute" }}  >
-                                <Placemark geometry={[55.93392851263577,37.99402948736569]}
-                                    options={{
-                                        iconLayout: 'default#image',
-                                        hideIconOnBalloonOpen: false,
-                                        iconImageSize: [90, 82],
-                                        iconImageOffset: [-45, -54],
-                                        cursor: 'default',
-                                        iconShadow: true,
-                                        balloonclose: true,
-                                        iconImageHref: 'img/map_ico.png',
-                                        balloonPanelMaxMapArea: 0,
-                                    }}
-                                />
+                            <Map defaultState={{ center: [55.9273572504225,37.99113621997555], zoom: 15, controls: [] }} style={{ width: "100%", height: "100%", position: "absolute" }}  >
                                 {/* касторама */}
                                 <Placemark geometry={[55.93190869452924,38.005329648101785]}
                                     options={{
@@ -98,7 +85,7 @@ export const Infra = () => {
                                     }}
                                 />
                                 {/* лесопарк */}
-                                <Placemark geometry={[55.93018313359685,38.00924567326352]}
+                                <Placemark geometry={[55.93925576893626,38.00584463223265]}
                                     options={{
                                         iconLayout: 'default#image',
                                         hideIconOnBalloonOpen: false,
@@ -206,7 +193,7 @@ export const Infra = () => {
                                     }}
                                 />
                                 {/* ресторан */}
-                                <Placemark geometry={[55.92908805501277,37.99932149990843]}
+                                <Placemark geometry={[55.929134134952584,37.995706704136914]}
                                     options={{
                                         iconLayout: 'default#image',
                                         hideIconOnBalloonOpen: false,
@@ -219,8 +206,8 @@ export const Infra = () => {
                                         balloonPanelMaxMapArea: 0,
                                     }}
                                 />
-                                {/* кафе */}
-                                <Placemark geometry={[55.930488189632406,37.99130973495488]}
+                                {/* кинотеатр */}
+                                <Placemark geometry={[55.924035160383205,38.00150564002711]}
                                     options={{
                                         iconLayout: 'default#image',
                                         hideIconOnBalloonOpen: false,
@@ -328,7 +315,7 @@ export const Infra = () => {
                                     }}
                                 />
                                 {/* Остановки */}
-                                <Placemark geometry={[55.93242232674395,37.990823526929724]}
+                                <Placemark geometry={[55.91911723193455,37.97392098053741]}
                                     options={{
                                         iconLayout: 'default#image',
                                         hideIconOnBalloonOpen: false,
@@ -341,63 +328,20 @@ export const Infra = () => {
                                         balloonPanelMaxMapArea: 0,
                                     }}
                                 />
-                                {/* <Placemark geometry={[55.9341267090737,37.993891974042754]}
+                                {/* Дом */}
+                                <Placemark geometry={[55.93392851263577,37.99402948736569]}
                                     options={{
                                         iconLayout: 'default#image',
                                         hideIconOnBalloonOpen: false,
-                                        iconImageSize: [90, 82],
-                                        iconImageOffset: [-45, -54],
+                                        iconImageSize: [130, 116],
+                                        iconImageOffset: [-65, -91],
                                         cursor: 'default',
                                         iconShadow: true,
                                         balloonclose: true,
-                                        iconImageHref: 'img/map_ico2.png',
-                                        balloonPanelMaxMapArea: 0,
-                                    }}
-                                /> */}
-                                <Placemark geometry={[55.93351843992186,37.99719645554913]}
-                                    options={{
-                                        iconLayout: 'default#image',
-                                        hideIconOnBalloonOpen: false,
-                                        iconImageSize: [90, 82],
-                                        iconImageOffset: [-45, -54],
-                                        cursor: 'default',
-                                        iconShadow: true,
-                                        balloonclose: true,
-                                        iconImageHref: 'img/map_ico2.png',
+                                        iconImageHref: 'img/map_ico5.png',
                                         balloonPanelMaxMapArea: 0,
                                     }}
                                 />
-                                <Placemark geometry={[55.93072991501997,37.99965335900674]}
-                                    options={{
-                                        iconLayout: 'default#image',
-                                        hideIconOnBalloonOpen: false,
-                                        iconImageSize: [90, 82],
-                                        iconImageOffset: [-45, -54],
-                                        cursor: 'default',
-                                        iconShadow: true,
-                                        balloonclose: true,
-                                        iconImageHref: 'img/map_ico2.png',
-                                        balloonPanelMaxMapArea: 0,
-                                    }}
-                                />
-                                <Placemark geometry={[55.92929642638383,37.991885681699635]}
-                                    options={{
-                                        iconLayout: 'default#image',
-                                        hideIconOnBalloonOpen: false,
-                                        iconImageSize: [90, 82],
-                                        iconImageOffset: [-45, -54],
-                                        cursor: 'default',
-                                        iconShadow: true,
-                                        balloonclose: true,
-                                        iconImageHref: 'img/map_ico2.png',
-                                        balloonPanelMaxMapArea: 0,
-                                    }}
-                                />
-                                
-
-
-
-
                             </Map>
                         </div>
                 </YMaps>
