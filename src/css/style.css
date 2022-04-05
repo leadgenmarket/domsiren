@@ -287,6 +287,9 @@ input {
          -o-transition: 0.3s;
             transition: 0.3s;
 }
+.hl_nav_opened {
+    display: block !important;
+}
 
     .hl_nav a + a {
         margin-left: 57px;
