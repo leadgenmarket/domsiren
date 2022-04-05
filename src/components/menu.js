@@ -70,7 +70,7 @@ export const Menu = () => {
                         <span></span>
                     </div>
                 </div>
-                <div className={opened ? "hl_nav hl_nav__opened" : "hl_nav"}>
+                <div className="hl_nav" style={{ display: opened ? "block" : "none" }}>
                     <a href="infra" onClick={clickMenu}>Инфраструктура</a>
                     <a href="flat" onClick={clickMenu}>Планировки и цены</a>
                     <a href="ipoteka" onClick={clickMenu}>Ипотека</a>
