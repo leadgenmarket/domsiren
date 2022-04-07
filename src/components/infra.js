@@ -85,20 +85,6 @@ export const Infra = () => {
                                     }}
                                 />
                                 {/* парки */}
-                                
-                                <Placemark geometry={[55.92518457272053,37.97137584590907]}
-                                    options={{
-                                        iconLayout: 'default#image',
-                                        hideIconOnBalloonOpen: false,
-                                        iconImageSize: [50, 46],
-                                        iconImageOffset: [-25, -37],
-                                        cursor: 'default',
-                                        iconShadow: true,
-                                        balloonclose: true,
-                                        iconImageHref: 'img/map_ico9.png',
-                                        balloonPanelMaxMapArea: 0,
-                                    }}
-                                />
                                 <Placemark geometry={[55.93925576893626,38.00584463223265]}
                                     options={{
                                         iconLayout: 'default#image',
@@ -138,7 +124,7 @@ export const Infra = () => {
                                         balloonPanelMaxMapArea: 0,
                                     }}
                                 />
-                                <Placemark geometry={[55.92359915051774,37.99635116621704]}
+                                <Placemark geometry={[55.9234096363312,37.996151128852816]}
                                     options={{
                                         iconLayout: 'default#image',
                                         hideIconOnBalloonOpen: false,
@@ -723,6 +709,20 @@ export const Infra = () => {
                                 />
                                 
                                 {/* магазины */}
+                                
+                                <Placemark geometry={[55.92498490430498,38.01206735714722]}
+                                    options={{
+                                        iconLayout: 'default#image',
+                                        hideIconOnBalloonOpen: false,
+                                        iconImageSize: [50, 46],
+                                        iconImageOffset: [-25, -37],
+                                        cursor: 'default',
+                                        iconShadow: true,
+                                        balloonclose: true,
+                                        iconImageHref: 'img/map_ico3.png',
+                                        balloonPanelMaxMapArea: 0,
+                                    }}
+                                />
                                 
                                 <Placemark geometry={[55.92819382246662,38.002490119923735]}
                                     options={{
