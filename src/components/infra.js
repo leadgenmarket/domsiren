@@ -85,7 +85,7 @@ export const Infra = () => {
                                     }}
                                 />
                                 {/* парки */}
-                                <Placemark geometry={[55.93925576893626,38.00584463223265]}
+                                <Placemark geometry={[55.92518457272053,37.97137584590907]}
                                     options={{
                                         iconLayout: 'default#image',
                                         hideIconOnBalloonOpen: false,
