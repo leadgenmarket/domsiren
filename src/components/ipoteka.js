@@ -27,13 +27,13 @@ const Ipoteka = () => {
                         <div className="ipoteka__list_ico"><img src="img/ipoteka_list_ico1.png" /></div>
                         <div className="ipoteka__list_content">
                             <div className="ipoteka__list_name">
-                                Ипотека
+                                Ипотека 8% для всех
                             </div>
                             <div className="ipoteka__list_btn">Подробнее</div>
                         </div>
                     </div>
                 </li>
-                <li data={"С господдержкой"} onClick={showPopup}>
+                {/* <li data={"С господдержкой"} onClick={showPopup}>
                     <div className="ipoteka__list_item">
                         <div className="ipoteka__list_ico"><img src="img/ipoteka_list_ico5.png" /></div>
                         <div className="ipoteka__list_content">
@@ -43,13 +43,13 @@ const Ipoteka = () => {
                             <div className="ipoteka__list_btn">Подробнее</div>
                         </div>
                     </div>
-                </li>
+                </li> */}
                 <li data={"семейная"} onClick={showPopup}>
                     <div className="ipoteka__list_item">
                         <div className="ipoteka__list_ico"><img src="img/ipoteka_list_ico3.png" /></div>
                         <div className="ipoteka__list_content">
                             <div className="ipoteka__list_name">
-                                семейная ипотека
+                                семейная ипотека от 2,5%
                             </div>
                             <div className="ipoteka__list_btn">Подробнее</div>
                         </div>
