@@ -1,7 +1,6 @@
 import "./css/style.css";
 import "./css/swiper.css"
 import { BlocksContext } from "./context/blocksContext"
-import { FlatsContext } from "./context/flatsContext"
 import { useBlocks } from "./hooks/blocks.hook"
 
 
@@ -15,9 +14,7 @@ function App() {
   return (
     <div className="App container_main">
       <BlocksContext.Provider value={{ blocks, setBlocks, popup, setPopup, menuClick, setMenuClick }}>
-        <FlatsContext.Provider value={{ flats, setFlats, activeFlat, setActiveFlat }}>
           <Loader />
-        </ FlatsContext.Provider>
       </BlocksContext.Provider>
     </div>
   );

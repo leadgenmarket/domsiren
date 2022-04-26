@@ -1,15 +1,16 @@
 import React, { Suspense, useEffect, useState, useContext } from "react"
 import { BlocksContext } from "../context/blocksContext"
-import { Popups } from "./popups";
 import { Menu } from './menu';
 import { Header } from './header';
+import Infra from './infra'
 
 
 
 
 export const Loader = () => {
+    const InfraMap = React.lazy(() => import("./infra-map"))
     const Presentation = React.lazy(() => import("./presentation"))
-    const Infra = React.lazy(() => import("./infra"))
+    const Popups = React.lazy(() => import("./popups"))
     const Comfort = React.lazy(() => import("./comfort"))
     const Transport = React.lazy(() => import("./transport"))
     const Plan_price = React.lazy(() => import("./plan_price"))
@@ -24,6 +25,7 @@ export const Loader = () => {
         <Menu />,
         <Header />,
         <Infra />,
+        <InfraMap />,
         <Presentation />,
         <Comfort />,
         /*<Genplan />,*/
@@ -50,7 +52,7 @@ export const Loader = () => {
         }
         return (
             <div className="blocks" data={loaded.menuClick ? "true" : ""}>
-                {loaded.popup?<Popups />:<div></div>}
+                {loaded.popup?<Suspense fallback={<div>Загрузка...</div>}><Popups /></Suspense>:<div></div>}
                 {toDraw.map((block) =>
                     block
                 )}

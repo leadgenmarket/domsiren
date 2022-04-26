@@ -408,3 +408,5 @@ export const Popups = () => {
         </section>
     )
 }
+
+export default Popups
