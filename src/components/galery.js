@@ -55,3 +55,5 @@ export const Galery = () => {
     </section>
     )
 }
+
+export default Galery

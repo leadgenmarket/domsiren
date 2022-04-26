@@ -995,3 +995,5 @@ export const Infra = () => {
         </div>
     </div>)
 }
+
+export default Infra
