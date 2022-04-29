@@ -52,14 +52,14 @@ export const How_buy = () => {
                             <a href="#">Подробнее</a>
                         </div>
                     </div>
-                    <div className="hb_in" data-text={"Без первого взноса"} onClick={showPopup} data="pu_ipot">
+                    {/* <div className="hb_in" data-text={"Без первого взноса"} onClick={showPopup} data="pu_ipot">
                         <div className="hb_img"><img src="/images/hb_vznos.svg" /></div>
                         <div className="hb_info">
                             <div className="ipot_name"><span>Без первого взноса</span></div>
                             <span>С эскроу и проектным финансированием банка</span>
                             <a href="#">Подробнее</a>
                         </div>
-                    </div>
+                    </div> */}
                     <div className="hb_in" data-text={"С господдержкой"} onClick={showPopup} data="pu_ipot">
                         <div className="hb_img"><img src="/images/hb_ipot_support.svg" /></div>
                         <div className="hb_info">

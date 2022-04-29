@@ -55,7 +55,7 @@ const Ipoteka = () => {
                         </div>
                     </div>
                 </li>
-                <li data={"без первого взноса"} onClick={showPopup}>
+                {/* <li data={"без первого взноса"} onClick={showPopup}>
                     <div className="ipoteka__list_item">
                         <div className="ipoteka__list_ico"><img src="img/ipoteka_list_ico4.png" /></div>
                         <div className="ipoteka__list_content">
@@ -65,7 +65,7 @@ const Ipoteka = () => {
                             <div className="ipoteka__list_btn">Подробнее</div>
                         </div>
                     </div>
-                </li>
+                </li> */}
                 {/* <li data={"с господдержкой от 4,7%"} onClick={showPopup}>
                     <div className="ipoteka__list_item">
                         <div className="ipoteka__list_ico"><img src="img/ipoteka_list_ico5.png" /></div>
