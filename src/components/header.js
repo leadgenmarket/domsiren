@@ -20,7 +20,7 @@ export const Header = () => {
             </div>
             <div className='header_center__plashka_main'>
                 <div className='header_center__plashka'>
-                    <span>Ипотека для всех <b>8,0%</b></span>
+                    <span>Ипотека для всех <b>4,99%</b></span>
                     <span>Семейная ипотека от <b>2,5%</b></span>
                 </div>
             </div>

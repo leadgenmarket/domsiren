@@ -27,7 +27,7 @@ const Ipoteka = () => {
                         <div className="ipoteka__list_ico"><img src="img/ipoteka_list_ico1.png" /></div>
                         <div className="ipoteka__list_content">
                             <div className="ipoteka__list_name">
-                                Ипотека 8% для всех
+                                Ипотека 4.99% для всех
                             </div>
                             <div className="ipoteka__list_btn">Подробнее</div>
                         </div>
