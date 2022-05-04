@@ -280,11 +280,12 @@ export const Popups = () => {
                                     <label className="in_style in_select">
                                         <select onChange={(event) => { setPervIpot(event.target.value) }}>
                                             <option value={""}>Первоначальный взнос</option>
-                                            <option value={"10%"}>10%</option>
+                                            <option value={"15%"}>15%</option>
                                             <option value={"20%"}>20%</option>
                                             <option value={"30%"}>30%</option>
                                             <option value={"40%"}>40%</option>
                                             <option value={"50%"}>50%</option>
+                                            <option value={"75%"}>75%</option>
                                         </select>
                                     </label>
                                 </div>
