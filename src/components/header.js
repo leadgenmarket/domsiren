@@ -13,15 +13,15 @@ export const Header = () => {
             </div>
             <div className="head_price">
                 <div>
-                    квартиры от
-                    <span>4.4</span>
-                    млн. ₽
+                    ипотека
+                    <span>4.99%</span>
+                    для всех
                 </div>
             </div>
             <div className='header_center__plashka_main'>
                 <div className='header_center__plashka'>
-                    <span>Ипотека для всех <b>4,99%</b></span>
-                    <span>Семейная ипотека от <b>2,5%</b></span>
+                    <span>От <b>18 700</b> руб./мес.</span>
+                    <span>при первоначальном взносе <b>20%</b></span>
                 </div>
             </div>
         </div>

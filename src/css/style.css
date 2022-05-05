@@ -138,6 +138,7 @@ input {
 
 .header {
     display: flex;
+    overflow: hidden;
     min-height: 100vh;
     -webkit-justify-content: center;
             justify-content: center;
@@ -238,9 +239,9 @@ input {
     position: absolute;
     font-size: 16px;
     color: #FFF;
-    right: -38px;
+    right: -80px;
     top: -37px;
-    width: 130px;
+    width: 160px;
     height: 130px;
     background: #711F64;
     color: #FFF;
@@ -2591,7 +2592,9 @@ input {
             right: 0;
             transform: scale(-1,1);
         }
-
+.blocks {
+    overflow: hidden;
+}
 
 /* @height */
 @media screen and (max-height: 1280px) {
@@ -3180,6 +3183,9 @@ input {
 }
 
 @media screen and (max-width: 780px) {
+    .head_price {
+        right: -20px;
+    }
     .plan_home .tm {
         padding-top: 17px;
     }
@@ -3284,6 +3290,9 @@ input {
 }
 
 @media screen and (max-width: 720px) {
+    .head_price {
+        right: -50px;
+    }
     .transport__r > div {
         margin-left: 0 !important;
     }
@@ -3355,6 +3364,13 @@ input {
 }
 
 @media screen and (max-width: 620px) {
+    .head_price {
+        width: 130px;
+        right: -30px;
+    }
+    .head_price span {
+        font-size: 42px;
+    }
     .plan_home__hover_info {
         opacity: 0.8;
     }
@@ -3763,6 +3779,11 @@ input {
 }
 
 @media screen and (max-width: 420px) {
+    .header_center__plashka {
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 17px;
+    }
     .pu_title {
         font-size: 28px;
     }
