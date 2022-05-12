@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { LightgalleryProvider, LightgalleryItem, useLightgallery } from "react-lightgallery";
+import "lightgallery.js/dist/css/lightgallery.css";
 
 
 const Hod_str = () => {
@@ -152,23 +154,29 @@ const Hod_str = () => {
                 </div>
             </div>
         </div>
-        <Swiper
-            speed={300}
-            spaceBetween={4}
-            slidesPerView={"auto"}
-            centeredSlides={false}
-            loop={false}
-            autoHeight={true}
-            onSwiper={(swiper) => setSwiper(swiper)}
-            className={"hod__slider"}
-        >
-            {photos ? photos.map((photo) => {
-                return <a href="#">
-                    <SwiperSlide><a class="hod__slide" href="#"><img src={process.env.REACT_APP_BACKEND_URL + "/" + photo} /></a></SwiperSlide>
-                </a>
-            }) : ""}
+        <LightgalleryProvider style={{ display: "none" }}>
+            <Swiper
+                speed={300}
+                spaceBetween={4}
+                slidesPerView={"auto"}
+                centeredSlides={false}
+                loop={false}
+                autoHeight={true}
+                onSwiper={(swiper) => setSwiper(swiper)}
+                className={"hod__slider"}
+            >
+                {photos ? photos.map((photo) => {
+                    return <a href="#">
+                        <SwiperSlide>
+                            <LightgalleryItem key={photo} src={process.env.REACT_APP_BACKEND_URL + "/" + photo.replace('m.jpg', '.jpg')} thumb={process.env.REACT_APP_BACKEND_URL + "/" + photo}> 
+                                <img src={process.env.REACT_APP_BACKEND_URL + "/" + photo} />
+                            </LightgalleryItem>
+                        </SwiperSlide>
+                    </a>
+                }) : ""}
 
-        </Swiper>
+            </Swiper>
+        </LightgalleryProvider>
         <div class="hod__slider_nav">
             <div class="slider_str slider_str_l" onClick={() => { swiper.slidePrev() }}><img src="img/slider_str_l.png" /></div>
             <div class="slider_str slider_str_r" onClick={() => { swiper.slideNext() }}><img src="img/slider_str_r.png" /></div>
