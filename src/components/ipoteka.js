@@ -88,6 +88,17 @@ const Ipoteka = () => {
                         </div>
                     </div>
                 </li>
+                <li data={"семейная военная"} onClick={showPopup}>
+                    <div className="ipoteka__list_item">
+                        <div className="ipoteka__list_ico"><img src="img/ipoteka_list_ico7.png" /></div>
+                        <div className="ipoteka__list_content">
+                            <div className="ipoteka__list_name">
+                                семейная военная ипотека
+                            </div>
+                            <div className="ipoteka__list_btn">Подробнее</div>
+                        </div>
+                    </div>
+                </li>
             </ul>
             <div className="ipoteka__logo_main">
                 <div className="ipoteka__logo">
